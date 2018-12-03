@@ -3,6 +3,7 @@ package com.udacity.sandwichclub;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -81,7 +82,7 @@ public class DetailActivity extends AppCompatActivity {
     private void populateUI(Sandwich sandwich) {
         /* String Builder to store ingredients data and alsoName data */
         StringBuilder ingredientsData = new StringBuilder();
-        StringBuilder mAlsoName = new StringBuilder();
+     //   StringBuilder mAlsoName = new StringBuilder();
         String origin;
         String otherName;
 
@@ -94,10 +95,12 @@ public class DetailActivity extends AppCompatActivity {
             ingredientsData.append("\u2022"+ing+"\n");
         }
 
+
         /* Construct String with alsoKnown name data */
-        for(String name : sandwich.getAlsoKnownAs()){
-            mAlsoName.append(name + ", ");
-        }
+//        for(String name : sandwich.getAlsoKnownAs()){
+//            mAlsoName.append(name + ", ");
+//        }
+        String mAlsoName = TextUtils.join(",", sandwich.getAlsoKnownAs());
 
         mDescription.setText(sandwich.getDescription());
         mIngredients.setText(ingredientsData.toString());

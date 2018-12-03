@@ -50,9 +50,9 @@ public class JsonUtils {
             alsoKnownAs.add(alsoNames.get(i).toString());
         }
         /* Parsing place of origin, description, image url, Ingredients */
-        String placeOfOrigin = sandwichData.getString(PLACE_OF_ORIGIN);
-        String description = sandwichData.getString(DESCRIPTION);
-        String image = sandwichData.getString(IMAGE);
+        String placeOfOrigin = sandwichData.optString(PLACE_OF_ORIGIN);
+        String description = sandwichData.optString(DESCRIPTION);
+        String image = sandwichData.optString(IMAGE);
         JSONArray ingredients = (JSONArray) sandwichData.get(INGREDIENTS);
         ArrayList<String> ingredientArray = new ArrayList<String>();
         for(int i = 0; i < ingredients.length(); i++){
