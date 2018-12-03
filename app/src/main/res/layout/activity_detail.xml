@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:paddingBottom="5dp"
+        android:paddingBottom="@dimen/layout_padding"
         tools:context="com.udacity.sandwichclub.DetailActivity">
 
         <LinearLayout
@@ -20,13 +20,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:id="@+id/origin_layout"
-                android:layout_margin="5dp">
+                android:layout_margin="@dimen/margin_layout_5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/detail_place_of_origin_label"
-                    android:textSize="18dp"
+                    android:textSize="@dimen/label_size"
                     android:textStyle="bold" />
 
                 <TextView
@@ -34,8 +34,8 @@
                     android:text="hgfufuy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/data_value_size"
+                    android:layout_marginLeft="@dimen/margin_layout_5dp"
                     android:textStyle="italic" />
             </LinearLayout>
 
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/margin_layout_5dp"
                 android:id="@+id/other_names_layout">
 
                 <TextView
@@ -51,16 +51,16 @@
                     android:layout_height="wrap_content"
                     android:gravity="left"
                     android:text="@string/detail_also_known_as_label"
-                    android:textSize="18dp"
+                    android:textSize="@dimen/label_size"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/s_other_names"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="@dimen/margin_layout_5dp"
                     android:text="safsdfsdf,sdfsdf,sdfs,fsdfsd"
-                    android:textSize="15dp"
+                    android:textSize="@dimen/data_value_size"
                     android:textStyle="italic" />
             </LinearLayout>
         </LinearLayout>
@@ -68,9 +68,9 @@
         <ImageView
             android:id="@+id/image_iv"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/image_height"
             android:adjustViewBounds="true"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/margin_layout_5dp"
             android:defaultFocusHighlightEnabled="true"
             android:contentDescription="@string/sandwich_picture_content_description"
             android:scaleType="centerCrop" />
@@ -79,21 +79,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_margin="5dp">
+            android:layout_margin="@dimen/margin_layout_5dp">
 
              <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="@string/detail_ingredients_label"
-                android:textSize="18dp"
+                android:textSize="@dimen/label_size"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/s_ingredients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:textSize="15dp"
+                android:layout_marginTop="@dimen/margin_layout_5dp"
+                android:textSize="@dimen/data_value_size"
                 android:text="Bread, Salt, asd,asda,asd,asd"
                 android:textStyle="italic" />
         </LinearLayout>
@@ -102,22 +102,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_margin="5dp">
+            android:layout_margin="@dimen/margin_layout_5dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Description"
-                android:textSize="18dp"
+                android:textSize="@dimen/label_size"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/s_description"
                 android:layout_width="match_parent"
-                android:textSize="15dp"
-                android:layout_marginTop="5dp"
+                android:textSize="@dimen/data_value_size"
+                android:layout_marginTop="@dimen/margin_layout_5dp"
                 android:text="This Ham Burger most famous in california and this is made up of Sandwch, chicken breast,onion,garlic"
-                android:layout_height="180dp" />
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
